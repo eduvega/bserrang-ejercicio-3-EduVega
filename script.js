@@ -5,4 +5,16 @@
 let buttonShowList = document.getElementById("showList");
 buttonShowList.addEventListener("click", getUsers);
 
-function getUsers() {}
+console.log("hi");
+
+function getUsers() {
+  //Para sacar usuarios por consola:
+fetch("users.json").then(response => response.json()).then( data => {console.log(data);
+
+  const result = data.filter(dinero => dinero.money > 200);
+  console.log(result);
+
+});
+}
+
+
